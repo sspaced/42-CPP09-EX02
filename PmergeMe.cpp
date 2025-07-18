@@ -1,12 +1,12 @@
 #include "PmergeMe.hpp"
 
-PmergeMe::~PmergeMe() {};
+PmergeMe::~PmergeMe() {}
 
-PmergeMe::PmergeMe(std::vector<unsigned int> &toSort) : _toSort(toSort) {};
+PmergeMe::PmergeMe(std::vector<unsigned int> &toSort) : _toSort(toSort) {}
 
 const std::vector<unsigned int> &PmergeMe::getToSort() const {
   return (_toSort);
-};
+}
 
 std::ostream &operator<<(std::ostream &os, const PmergeMe &data) {
   const std::vector<unsigned int> &toSort = data.getToSort();
@@ -15,7 +15,7 @@ std::ostream &operator<<(std::ostream &os, const PmergeMe &data) {
     os << *it << " ";
   }
   return os;
-};
+}
 
 std::vector<std::vector<unsigned int > >
 PmergeMe::batch(const std::vector<unsigned int> &toSort) const{
@@ -44,13 +44,13 @@ void PmergeMe::displayBatch(
            toDisplay.begin();
        it != toDisplay.end(); ++it) {
 		for (std::vector<unsigned int>::const_iterator itPair = (*it).begin(); itPair != (*it).end(); ++itPair) {
-			std::cout << *itPair;
+			std::cout << *itPair << " ";
 		}
-		std::cout << std::endl;
+		std::cout << "\n";
   }
-};
+}
 
 void PmergeMe::sort() const{
 	std::vector<std::vector<unsigned int> > batchedData = batch(this->getToSort());
     displayBatch(batchedData);
-};
+}
