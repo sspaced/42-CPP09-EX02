@@ -16,4 +16,4 @@ private:
   std::vector<unsigned int> _toSort;
 };
 
-std::ostream &operator<<(std::ostream &os, const PmergeMe &PmergeMe);
+std::ostream &operator<<(std::ostream &os, const PmergeMe &data);

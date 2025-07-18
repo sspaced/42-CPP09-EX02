@@ -8,8 +8,8 @@ const std::vector<unsigned int> &PmergeMe::getToSort() const {
   return (_toSort);
 };
 
-std::ostream &operator<<(std::ostream &os, const PmergeMe &PmergeMe) {
-  const std::vector<unsigned int> &toSort = PmergeMe.getToSort();
+std::ostream &operator<<(std::ostream &os, const PmergeMe &data) {
+  const std::vector<unsigned int> &toSort = data.getToSort();
   std::vector<unsigned int>::const_iterator it;
   for (it = toSort.begin(); it != toSort.end(); it++) {
     os << *it << " ";
