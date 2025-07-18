@@ -9,7 +9,7 @@ public:
   PmergeMe(std::vector<unsigned int> &toSort);
   const std::vector<unsigned int> &getToSort() const;
   std::vector<std::vector<unsigned int > > batch(const std::vector<unsigned int>& toSort) const;
-  void displaySplit(const std::vector<std::vector<unsigned int > > &toDisplay) const;
+  void displayBatch(const std::vector<std::vector<unsigned int > > &toDisplay) const;
   void sort() const;
 
 private:

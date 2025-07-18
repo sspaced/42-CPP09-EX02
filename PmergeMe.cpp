@@ -38,7 +38,7 @@ PmergeMe::batch(const std::vector<unsigned int> &toSort) const{
   return result;
 }
 
-void PmergeMe::displaySplit(
+void PmergeMe::displayBatch(
     const std::vector<std::vector<unsigned int > > &toDisplay) const{
   for (std::vector<std::vector<unsigned int > >::const_iterator it =
            toDisplay.begin();
@@ -52,5 +52,5 @@ void PmergeMe::displaySplit(
 
 void PmergeMe::sort() const{
 	std::vector<std::vector<unsigned int> > batchedData = batch(this->getToSort());
-    displaySplit(batchedData);
+    displayBatch(batchedData);
 };
