@@ -52,3 +52,28 @@ void PmergeMe::sort() const {
   std::cout << "big length : " << big.size() << "\n";
   std::cout << "big length : " << small.size() << "\n";
 }
+
+// std::vector<unsigned int> subSort(std::vector<unsigned int> &toSort)
+// {
+// 	std::vector< unsigned int > big;
+//   	std::vector< unsigned int > small;
+// }
+
+std::vector<uint64_t> jacobsthalSequence(unsigned int n)
+{
+	std::vector<uint64_t> sequence;
+	unsigned int prev = 0;
+	unsigned int current = 1;
+	unsigned int buff;
+
+	sequence.push_back(prev);
+	sequence.push_back(current);
+
+	for (size_t i = 0; i < n; i++) {
+		buff = current + 2 * prev;
+		prev = current;
+		current = buff;
+		sequence.push_back(current);
+	}
+	return sequence;
+}

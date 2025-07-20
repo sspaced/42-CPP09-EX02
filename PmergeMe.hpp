@@ -15,3 +15,4 @@ private:
 };
 
 std::ostream &operator<<(std::ostream &os, const PmergeMe &data);
+std::vector<uint64_t> jacobsthalSequence(unsigned int n);
