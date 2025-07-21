@@ -57,6 +57,13 @@ void batch(std::vector< unsigned int > toBatch) {
   std::cout << "big length : " << small.size() << "\n";
 }
 
+void reconstruct(std::vector< unsigned int > big,
+                 std::vector< unsigned int > small) {
+  for (std::vector< unsigned int >::const_iterator it = big.begin();
+       it != big.end(); ++it) {
+  }
+}
+
 unsigned int jacobsthalSequence(unsigned int n) {
   if (n == 0)
     return (0);

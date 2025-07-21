@@ -4,6 +4,6 @@
 	[ ] Remove duplicate
 [x] Function to sort pair and make a winner/looser vec
 [ ] Recursive function to sort winner
-[ ] Jacob sequence function
+[x] Jacob sequence function
 [ ] Function that insert looser based on Jacob sequence
 [ ] Function that check if list is sorted
