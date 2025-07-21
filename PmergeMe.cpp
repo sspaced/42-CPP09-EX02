@@ -20,15 +20,19 @@ std::ostream& operator<<(std::ostream& os, const PmergeMe& data) {
 
 void PmergeMe::sort() const {
   std::vector< unsigned int > toSort = this->getToSort();
+  batch(toSort);
+}
+
+void batch(std::vector< unsigned int > toBatch) {
   std::vector< unsigned int > big;
   std::vector< unsigned int > small;
 
   unsigned int index = 0;
   unsigned int prev;
 
-  for (std::vector< unsigned int >::const_iterator it = toSort.begin();
-       it != toSort.end(); ++it) {
-    if (it == toSort.begin()) {
+  for (std::vector< unsigned int >::const_iterator it = toBatch.begin();
+       it != toBatch.end(); ++it) {
+    if (it == toBatch.begin()) {
       prev = *it;
       std::cout << "First prev : " << prev << "\n";
     }
@@ -53,27 +57,17 @@ void PmergeMe::sort() const {
   std::cout << "big length : " << small.size() << "\n";
 }
 
-// std::vector<unsigned int> subSort(std::vector<unsigned int> &toSort)
-// {
-// 	std::vector< unsigned int > big;
-//   	std::vector< unsigned int > small;
-// }
+unsigned int jacobsthalSequence(unsigned int n) {
+  if (n == 0)
+    return (0);
+  unsigned int prev = 0;
+  unsigned int current = 1;
+  unsigned int buff;
 
-std::vector<uint64_t> jacobsthalSequence(unsigned int n)
-{
-	std::vector<uint64_t> sequence;
-	unsigned int prev = 0;
-	unsigned int current = 1;
-	unsigned int buff;
-
-	sequence.push_back(prev);
-	sequence.push_back(current);
-
-	for (size_t i = 0; i < n; i++) {
-		buff = current + 2 * prev;
-		prev = current;
-		current = buff;
-		sequence.push_back(current);
-	}
-	return sequence;
+  for (size_t i = 0; i < n - 1; i++) {
+    buff = current + 2 * prev;
+    prev = current;
+    current = buff;
+  }
+  return current;
 }

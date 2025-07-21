@@ -13,11 +13,9 @@ int main(void)
 	PmergeMe ford(data);
 	ford.sort();
 
-	std::vector<uint64_t> seq = jacobsthalSequence(data.size());
-
-	for (size_t i = 0; i < 100; i++)
+	for (size_t i = 0; i < 20; i++)
 	{
-		std::cout << seq[i] << "\n";
+		std::cout << i << " : " << jacobsthalSequence(i) << "\n";
 	}
 	return (0);
 };
