@@ -67,6 +67,8 @@
 		"numbers": "cpp",
 		"ostream": "cpp",
 		"ranges": "cpp",
-		"span": "cpp"
+		"span": "cpp",
+		"__tree": "cpp",
+		"set": "cpp"
 	}
 }
