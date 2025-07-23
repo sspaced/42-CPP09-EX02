@@ -1,3 +1,7 @@
 Language:        Cpp
 Standard:        Cpp03
 SpacesInAngles:  true
+IndentWidth:     4
+TabWidth:        4
+UseTab:          Never
+
